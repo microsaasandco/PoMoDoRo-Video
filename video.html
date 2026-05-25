@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PoMoDoRo Presentation Video</title>
+    <meta name="viewport" content="width=700, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #090d18;
+            --bg-gradient-a: #10172a;
+            --bg-gradient-b: #0a0f1d;
+            --surface: #111a2f;
+            --surface-strong: #16223d;
+            --surface-elevated: #1a2847;
+            --border: #26395e;
+            --text: #e8f0ff;
+            --muted: #9eb1d7;
+            --accent: #2ad4c1;
+            --accent-strong: #18b3a2;
+            --danger: #ff6f86;
+            --focus-ring: rgba(42, 212, 193, 0.28);
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle at 90% 10%, rgba(42, 212, 193, 0.06) 0, rgba(42, 212, 193, 0) 32%),
+                radial-gradient(circle at 10% 85%, rgba(115, 159, 255, 0.06) 0, rgba(115, 159, 255, 0) 32%),
+                linear-gradient(165deg, #04060b 0%, #090d18 100%);
+            color: var(--text);
+            font-family: "Avenir Next", "Century Gothic", "Trebuchet MS", Arial, sans-serif;
+        }
+
+        .video-card {
+            padding: 18px 8px 30px 8px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-title {
+            margin: 0 0 40px 0;
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: 0.01em;
+            color: #fff;
+            text-shadow: 0 2px 18px var(--accent), 0 2px 24px rgba(42, 212, 193, 0.18);
+            line-height: 1.1;
+        }
+
+        .video-card video {
+            border-radius: var(--radius);
+            box-shadow: 0 4px 24px rgba(42, 212, 193, 0.10);
+            width: 100%;
+            max-width: 340px;
+            max-height: 80vh;
+            height: 80vh;
+            background: #000;
+            margin-bottom: 18px;
+            outline: none;
+            transition: box-shadow 0.2s;
+            object-fit: contain;
+        }
+
+        .video-card video:focus {
+            box-shadow: 0 0 0 3px var(--focus-ring), 0 4px 24px rgba(42, 212, 193, 0.10);
+        }
+
+        .video-card p {
+            color: var(--muted);
+            font-size: 0.98em;
+            margin-top: 18px;
+        }
+
+        @media (max-width: 450px) {
+            .video-card {
+                padding: 6px 1vw 8px 1vw;
+                max-width: 98vw;
+            }
+
+            .video-card video {
+                max-width: 96vw;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="video-card">
+
+        <video controls poster="https://github.com/microsaasandco/PoMoDoRo-Video/raw/main/PoMoDoRo-Couverture.jpg">
+            <source src="https://github.com/microsaasandco/PoMoDoRo-Video/raw/main/PoMoDoRo.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+</body>
+
+</html>
